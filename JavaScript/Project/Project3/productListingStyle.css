@@ -1,0 +1,240 @@
+body {
+  background-color: rgba(142, 142, 227, 0.097);
+}
+
+.outline {
+  outline: 3px solid rgb(205, 174, 96);
+  text-align: center;
+}
+
+.pad {
+  padding-right: 15px;
+}
+
+b {
+  font-weight: 500;
+  color: white;
+}
+
+.justify {
+  text-align: center;
+  justify-content: center;
+  padding: 45px;
+}
+
+header {
+  /* border: 0; */
+  background-image: linear-gradient(
+      to left,
+      rgba(31, 31, 97, 0.632),
+      rgb(31, 31, 97, 0.632)
+    ),
+    url(Resourses/PLP-headerj.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  padding: 70px 0px;
+}
+
+.img-full-scale {
+  position: relative;
+  left: 95px;
+}
+
+.text-1,
+.text-2 {
+  font-weight: 300;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(18, 18, 87);
+}
+
+.content {
+  color: white;
+  justify-content: space-around;
+  padding: 90px 145px;
+}
+
+.content-text-left .content-left-text {
+  display: grid;
+  /* padding: 150px 0; */
+}
+
+.content-right-text {
+  display: grid;
+}
+
+.content-text-right {
+  display: grid;
+}
+
+.btn-circle-sm {
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+  margin-right: 6px;
+  position: relative;
+}
+
+.btn-circle-sm i {
+  position: relative;
+  top: -1px;
+  left: 0px;
+  font-size: 34px;
+  color: rgb(18, 18, 87);
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN CONTENT */
+.image {
+  background-position: cover;
+}
+
+.file {
+  display: none;
+}
+
+.image-div {
+  position: relative;
+}
+
+.uploadImg {
+  width: 96%;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.641);
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.image-div:hover .uploadImg {
+  width: 96%;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.641);
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+#image-input {
+  position: absolute;
+  bottom: 0;
+}
+
+.comodities {
+  position: absolute;
+  top: 171px;
+  right: 15px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.comodities p {
+  margin: 0;
+  padding: 0 4px;
+}
+
+.btn-grp {
+  position: absolute;
+  width: 16px;
+  transform: translate(637px, 149px);
+}
+
+.btn-custom {
+  background-color: rgb(31, 31, 97);
+  color: white;
+}
+
+.btn-custom:focus-within {
+  color: white;
+  background-color: rgb(18, 18, 87);
+}
+
+/* Resposive Design */
+@media (min-width: 300px) and (max-width: 500px) {
+  .justify {
+    padding: 0;
+    padding-top: 30px;
+  }
+  .img-full-scale {
+    position: relative;
+    left: 0;
+  }
+
+  .container-fluid {
+    display: flex;
+  }
+
+  /* MAIN */
+  .container {
+    margin-bottom: 15px;
+  }
+
+  .content-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-div {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 !important;
+  }
+
+  .border {
+    position: relative;
+    left: 13px;
+  }
+
+  .search-add {
+    padding: 0px !important;
+    width: 100%;
+    position: relative;
+    right: 13px;
+  }
+
+  #search,
+  #add {
+    position: relative;
+    left: 0;
+  }
+
+  .comodities {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  /* FOOTER */
+  footer {
+    padding: 0px;
+  }
+
+  footer .content {
+    padding: 10px;
+  }
+
+  .quick-menu {
+    padding-top: 48px;
+  }
+}
