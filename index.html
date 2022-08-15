@@ -672,18 +672,26 @@
               consectetur adipisicing elit. Qui, dolorum.
             </p>
 
-            <form action="">
+            <form
+              name="PROPERTY SITE - CONTACT FORM"
+              method="POST"
+              data-netlify="true"
+            >
               <div class="row mb-3">
                 <div class="col">
+                  <label for="name"></label>
                   <input
+                    name="name"
                     type="text"
                     class="form-control rounded-0"
                     placeholder="Your Name"
                   />
                 </div>
                 <div class="col">
+                  <label for="number"></label>
                   <input
                     type="number"
+                    name="phone number"
                     class="form-control rounded-0"
                     placeholder="Phone Number"
                   />
@@ -691,15 +699,17 @@
               </div>
 
               <div class="input-group rounded-0">
+                <label for="message"></label>
                 <textarea
                   class="form-control"
                   aria-label="With textarea"
                   placeholder="Message..."
                   rows="5"
+                  name="message"
                 ></textarea>
               </div>
 
-              <button type="button" class="btn btn-custom rounded-0 mt-5">
+              <button type="submit" class="btn btn-custom rounded-0 mt-5">
                 SEND MESSAGE <span class="bi bi-arrow-right"></span>
               </button>
             </form>

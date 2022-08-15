@@ -3,6 +3,10 @@ body {
   background-color: rgba(142, 142, 227, 0.097);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* HEADER */
 
 .outline {
@@ -240,7 +244,7 @@ header {
 }
 
 .content-left-text {
-  padding: 18px;
+  padding: 94px;
 }
 
 /* CONTAINER 4 */
@@ -504,9 +508,16 @@ footer {
 
 /* RESPOSIVENESS FOR MOBILE PHONE - SMALL TO LARGE */
 @media (min-width: 300px) and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
   .justify {
     padding: 0;
     padding-top: 40px;
+  }
+
+  .container-1 {
+    padding: 20px;
   }
 
   .img-full-scale {
@@ -583,8 +594,7 @@ footer {
   }
 
   .coursel-custom .col {
-    margin-right: 275px;
-    margin-bottom: 10px;
+    width: 90%;
   }
 
   .card-blog {
@@ -592,7 +602,7 @@ footer {
   }
 
   .form {
-    padding: 10px 0px;
+    padding: 10px 20px;
   }
 
   .form-content {
@@ -600,7 +610,7 @@ footer {
   }
 
   footer .content {
-    padding: 0;
+    padding: 20px;
   }
 
   .btn-circle {
@@ -618,5 +628,53 @@ footer {
 
   .footer-logo {
     width: 100% !important;
+  }
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (min-width: 430px) and (max-width: 768px) {
+  .img-full-scale {
+    right: 14px !important;
+  }
+
+  .text {
+    margin: 43px 0;
+  }
+
+  .card-container {
+    grid-template-columns: 100px 100px 100px 100px;
+    column-gap: 54px;
+  }
+
+  .right-content {
+    padding-right: 10px;
+  }
+
+  .content-left-text {
+    padding: 0px;
+  }
+
+  .container-3 {
+    padding: 23px 34px;
+  }
+
+  .align {
+    padding: 0 17px;
+  }
+
+  .col {
+    width: 50% !important;
+  }
+
+  .card-blog {
+    padding: 0 10px;
+  }
+
+  .form-content {
+    padding: 0px;
+  }
+
+  .content {
+    padding: 90px 25px;
   }
 }

@@ -3,45 +3,73 @@ showData();
 let addBtn = document.getElementById("add");
 
 addBtn.addEventListener("click", function (e) {
-  const reader = new FileReader();
-
+  let Name = document.getElementById("name");
+  let form = document.getElementById("Add-form");
+  let input = Name.value;
+  let address = document.getElementById("address");
+  let inputAddress = address.value;
+  let addCard = document.getElementById("addCard");
+  let description = document.getElementById("description");
+  let inputDescription = description.value;
+  let kitchen = document.getElementById("kitchen");
+  let bedroom = document.getElementById("bedroom");
+  let garage = document.getElementById("garage");
   const message = document.getElementById("message");
-  reader.addEventListener("load", () => {
-    let form = document.getElementById("Add-form");
-    let bedroom = document.getElementById("bedroom");
-    let kitchen = document.getElementById("kitchen");
-    let Name = document.getElementById("name");
-    let address = document.getElementById("address");
 
-    let description = document.getElementById("description");
-    let garage = document.getElementById("garage");
+  let data = localStorage.getItem("data");
+  if (data == null) {
+    dataObj = [];
+  } else {
+    dataObj = JSON.parse(data);
+  }
 
-    let data = localStorage.getItem("data");
-    if (data == null) {
-      dataObj = [];
-    } else {
-      dataObj = JSON.parse(data);
-    }
+  let inputData = {
+    name: Name.value,
+    address: address.value,
+    description: description.value,
+    kitchen: kitchen.value,
+    bedroom: bedroom.value,
+    garage: garage.value,
+  };
 
-    let obj = {
-      name: Name.value,
-      address: address.value,
-      description: description.value,
-      kitchen: kitchen.value,
-      bedroom: bedroom.value,
-      garage: garage.value,
-      image: reader.result,
-    };
-
-    dataObj.push(obj);
+  if (
+    input &&
+    inputAddress &&
+    inputDescription &&
+    kitchen &&
+    bedroom &&
+    garage
+  ) {
+    dataObj.push(inputData);
     localStorage.setItem("data", JSON.stringify(dataObj));
-  });
 
-  let imageBtn = document.querySelector("#myFileInput");
-  reader.readAsDataURL(imageBtn.files[0]);
-  showData();
+    Name.value = "";
+    address.value = "";
+    description.value = "";
+    kitchen.value = "";
+    bedroom.value = "";
+    garage.value = "";
+
+    form.reset();
+    showData();
+    message.innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong>
+    Your Property is listed successfully!!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`;
+  } else {
+    message.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong>
+    Please fil the form first.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`;
+  }
+
+  setTimeout(function () {
+    message.innerHTML = ``;
+  }, 5000);
+
   e.preventDefault();
-  form.clear();
 });
 
 function showData() {
@@ -57,12 +85,11 @@ function showData() {
     html += `<div class="col-12">
     <div class="row p-2 bg-white border rounded mt-2 mb-2">
       <div class="col-4 pe-2 ps-0 image-div">
-      <div class="image img-fluid photo" style = "width: 100%; min-height: 200px; 
-      background-image:linear-gradient(
-        to top,
-        rgba(255, 255, 255, 0.403),
-      rgba(0, 0, 0, 0)
-      ), url(${e.image}); background-position: center; background-size: cover"; background-repeat: no-repeat;></div>
+        <img
+          src="Resourses/property.jpg"
+          alt=""
+          class="img-fluid"
+        />
         <div class="comodities d-flex">
           <img
             src="Resourses/kitchen-sink-svgrepo-com.svg"

@@ -29,7 +29,7 @@ header {
       rgba(31, 31, 97, 0.632),
       rgb(31, 31, 97, 0.632)
     ),
-    url(Resourses/PLP-headerj.jpg);
+    url(../../../Images/PLP-headerj.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -38,11 +38,6 @@ header {
   text-align: center;
   color: white;
   padding: 70px 0px;
-}
-
-.img-full-scale {
-  position: relative;
-  left: 95px;
 }
 
 .text-1,
@@ -101,8 +96,11 @@ footer {
 }
 
 /* MAIN CONTENT */
-.image {
-  background-position: cover;
+.img-fluid {
+  position: relative;
+  /* align-items: center; */
+  float: left;
+  width: 100%;
 }
 
 .file {
@@ -144,7 +142,7 @@ footer {
 
 .comodities {
   position: absolute;
-  top: 171px;
+  top: 151px;
   right: 15px;
   align-items: flex-end;
   justify-content: flex-end;
@@ -157,84 +155,12 @@ footer {
 
 .btn-grp {
   position: absolute;
-  width: 16px;
-  transform: translate(637px, 149px);
+  width: 15%;
+  transform: translate(630px, 173px);
 }
 
-.btn-custom {
-  background-color: rgb(31, 31, 97);
-  color: white;
-}
-
-.btn-custom:focus-within {
-  color: white;
-  background-color: rgb(18, 18, 87);
-}
-
-/* Resposive Design */
-@media (min-width: 300px) and (max-width: 500px) {
-  .justify {
-    padding: 0;
-    padding-top: 30px;
-  }
-  .img-full-scale {
-    position: relative;
-    left: 0;
-  }
-
-  .container-fluid {
-    display: flex;
-  }
-
-  /* MAIN */
-  .container {
-    margin-bottom: 15px;
-  }
-
-  .content-left {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .image-div {
-    width: 100%;
-    margin-bottom: 5px;
-    padding: 0 !important;
-  }
-
-  .border {
-    position: relative;
-    left: 13px;
-  }
-
-  .search-add {
-    padding: 0px !important;
-    width: 100%;
-    position: relative;
-    right: 13px;
-  }
-
-  #search,
-  #add {
-    position: relative;
-    left: 0;
-  }
-
-  .comodities {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  /* FOOTER */
-  footer {
-    padding: 0px;
-  }
-
-  footer .content {
-    padding: 10px;
-  }
-
-  .quick-menu {
-    padding-top: 48px;
-  }
+.card-description{
+    overflow: hidden;
+    line-height: 1.2em;
+    height: 6em;
 }
